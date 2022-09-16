@@ -8,6 +8,7 @@
 
 ### 使用教程
 > 下载exe点击运行
+> 下载链接[ylgygen.exe](https://github.com/pwh-pwh/ylgygen/releases/download/v1.0/ui.exe)
 ![](img/img.png)
 ### 免责声明
 
