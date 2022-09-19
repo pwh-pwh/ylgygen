@@ -12,12 +12,13 @@ import (
 )
 
 func BrushScore(num int, token string, st int) {
-	var wg = sync.WaitGroup{}
+	var wg = new(sync.WaitGroup)
 	wg.Add(num)
 	for i := 0; i < num; i++ {
-		go GetS(token, st, &wg)
+		go GetS(token, st, wg)
 	}
 	wg.Wait()
+	fmt.Println("end")
 }
 
 func BrushScore2(uid string, num int, st int) {
@@ -68,7 +69,7 @@ func GetToken(uid string) string {
 	ut := Ut{
 		tt,
 		"1",
-		gjson.Get(string(data), "data.avatar").String(),
+		"http://aaa.png",
 		1,
 	}
 	marshal, _ := json.Marshal(ut)
@@ -89,6 +90,7 @@ func GetToken(uid string) string {
 	rq.Header.Set("Referer", "https://servicewechat.com/wx141bfb9b73c970a9/15/page-frame.html")
 	resp1, _ := client.Do(rq)
 	all, _ := ioutil.ReadAll(resp1.Body)
+	fmt.Println(string(all))
 	return gjson.Get(string(all), "data.token").String()
 }
 
@@ -110,5 +112,6 @@ func GetS(token string, st int, wg *sync.WaitGroup) (*http.Response, error) {
 	req.Header.Set("Connection", "keep-alive")
 	req.Header.Set("Referer", "https://servicewechat.com/wx141bfb9b73c970a9/15/page-frame.html")
 	defer wg.Done()
+	//fmt.Println("get S")
 	return client.Do(req)
 }
