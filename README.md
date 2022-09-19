@@ -11,6 +11,8 @@
 > 下载链接[ylgygen.exe](https://github.com/pwh-pwh/ylgygen/releases/download/v1.0/ui.exe)
 ![](img/img.png)
 > ![](img/a.png)
+> 增加uid模式，不用抓包(点击我的名片，填入id就可以刷了)
+> ![](img/img_2.png)
 ### 免责声明
 
 1. 本仓库发布的 `ylgygen` (下文均用本项目代替) 项目中涉及的任何脚本，仅用于测试和学习研究，禁止用于商业用途，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断。
