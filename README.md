@@ -9,7 +9,6 @@
 ### 使用教程
 > 下载exe点击运行
 > 下载链接[ylgygen.exe](https://github.com/pwh-pwh/ylgygen/releases/download/v1.0/ui.exe)
-![](img/img.png)
 > ![](img/a.png)
 > 增加uid模式，不用抓包(点击我的名片，填入id就可以刷了)
 > ![](img/img_2.png)
